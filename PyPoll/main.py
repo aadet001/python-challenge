@@ -1,7 +1,8 @@
 #PyPoll
 import pandas as pd 
 
-df = pd.read_csv("C:/Users/aaadetun/Downloads/python-challenge/PyPoll/Resources/election_data.csv")
+#C:/Users/icanhearme/Downloads/Data Science Boot Camp/HW Assignments/challenge 3/PyPoll/Resources
+df = pd.read_csv("C:/Users/icanhearme/Downloads/Data Science Boot Camp/HW Assignments/challenge 3/PyPoll/Resources/election_data.csv")
 
 
 #get the total number of votes cast
@@ -27,6 +28,7 @@ for i in range(n):
 winner = df["Candidate"].value_counts().idxmax()
 
 #print summary
+print("```text")
 print("Election Results")
 print("-------------------------")
 print("Total Votes: " + str(total_votes))
@@ -39,16 +41,11 @@ for i in range(n):
 print("-------------------------")
 print("Winner: " + winner)
 print("-------------------------")
-    cPerc = '%.3f' % (df["Candidate"].value_counts().sort_index()[i]/total_votes*100)
-    cVotes = df["Candidate"].value_counts().sort_index()[i]
-    print(cName+ ': '+ str(cPerc)+'% ('+ str(cVotes)+ ')')
-print("-------------------------")
-print("Winner: " + winner)
-print("-------------------------")
+print("```")
 
 
 #write to text file
-fw = open("C:/Users/aaadetun/Downloads/python-challenge/PyPoll/analysis/analysis.txt", "w+")
+fw = open("C:/Users/icanhearme/Downloads/Data Science Boot Camp/HW Assignments/challenge 3/PyPoll/analysis/analysis.txt", "w+")
 fw.write("```text\n")
 fw.write("Election Results")
 fw.write("\n-------------------------\n")
