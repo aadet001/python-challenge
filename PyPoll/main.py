@@ -33,9 +33,29 @@ print("Total Votes: " + str(total_votes))
 print("-------------------------")
 for i in range(n): 
     cName = df["Candidate"].value_counts().sort_index().index[i]
-    cPerc = '%.3f' % (df["Candidate"].value_counts()[i]/total_votes*100)
-    cVotes = df["Candidate"].value_counts()[i]
+    cPerc = '%.3f' % (df["Candidate"].value_counts().sort_index()[i]/total_votes*100)
+    cVotes = df["Candidate"].value_counts().sort_index()[i]
     print(cName+ ': '+ str(cPerc)+'% ('+ str(cVotes)+ ')')
 print("-------------------------")
 print("Winner: " + winner)
 print("-------------------------")
+
+
+#write to text file
+fw = open("C:/Users/aaadetun/Downloads/python-challenge/PyPoll/analysis/analysis.txt", "w+")
+fw.write("```text\n")
+fw.write("Election Results")
+fw.write("\n-------------------------\n")
+fw.write("Total Votes: " + str(total_votes))
+fw.write("\n-------------------------\n")
+for i in range(n): 
+    cName = df["Candidate"].value_counts().sort_index().index[i]
+    cPerc = '%.3f' % (df["Candidate"].value_counts().sort_index()[i]/total_votes*100)
+    cVotes = df["Candidate"].value_counts().sort_index()[i]
+    fw.write(cName+ ': '+ str(cPerc)+'% ('+ str(cVotes)+ ')\n')
+fw.write("-------------------------\n")
+fw.write("Winner: " + winner)
+fw.write("\n-------------------------\n")
+fw.write("```\n")
+
+fw.close()
