@@ -1,5 +1,41 @@
+#PyPoll
 import pandas as pd 
 
-df = pd.read_csv("Resources/election_data.csv")
+df = pd.read_csv("C:/Users/aaadetun/Downloads/python-challenge/PyPoll/Resources/election_data.csv")
 
-print(df)
+
+#get the total number of votes cast
+total_votes = len(df)
+
+#list of candidates who received votes
+candidates = df["Candidate"].unique()
+
+n = len(df["Candidate"].value_counts())
+#put all values into 2d array
+#2d array default constructor. 3x3
+# t = [ [0]*3 for i in range(n)]
+
+#win percentage
+winper = {}
+for i in range(n): 
+    winper[df["Candidate"].value_counts()[i]] = '%.3f' % (df["Candidate"].value_counts()[i]/total_votes*100)
+
+#total number of votes for each candidate
+
+
+#winner of the election
+winner = df["Candidate"].value_counts().idxmax()
+
+#print summary
+print("Election Results")
+print("-------------------------")
+print("Total Votes: " + str(total_votes))
+print("-------------------------")
+for i in range(n): 
+    cName = df["Candidate"].value_counts().sort_index().index[i]
+    cPerc = '%.3f' % (df["Candidate"].value_counts()[i]/total_votes*100)
+    cVotes = df["Candidate"].value_counts()[i]
+    print(cName+ ': '+ str(cPerc)+'% ('+ str(cVotes)+ ')')
+print("-------------------------")
+print("Winner: " + winner)
+print("-------------------------")
