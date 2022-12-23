@@ -2,7 +2,7 @@
 import pandas as pd 
 
 #C:/Users/icanhearme/Downloads/Data Science Boot Camp/HW Assignments/challenge 3/PyPoll/Resources
-df = pd.read_csv("C:/Users/icanhearme/Downloads/Data Science Boot Camp/HW Assignments/challenge 3/PyPoll/Resources/election_data.csv")
+df = pd.read_csv("PyPoll/Resources/election_data.csv")
 
 
 #get the total number of votes cast
@@ -45,7 +45,7 @@ print("```")
 
 
 #write to text file
-fw = open("C:/Users/icanhearme/Downloads/Data Science Boot Camp/HW Assignments/challenge 3/PyPoll/analysis/analysis.txt", "w+")
+fw = open("PyPoll/analysis/analysis.txt", "w+")
 fw.write("```text\n")
 fw.write("Election Results")
 fw.write("\n-------------------------\n")
