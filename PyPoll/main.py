@@ -1,7 +1,6 @@
 #PyPoll
 import pandas as pd 
 
-#C:/Users/icanhearme/Downloads/Data Science Boot Camp/HW Assignments/challenge 3/PyPoll/Resources
 df = pd.read_csv("PyPoll/Resources/election_data.csv")
 
 
