@@ -1,8 +1,6 @@
 #PyPoll
 import pandas as pd 
 
-
-# df = pd.read_csv("C:/Users/icanhearme/Downloads/Data Science Boot Camp/HW Assignments/challenge 3/PyPoll/Resources/election_data.csv")
 df = pd.read_csv("PyPoll/Resources/election_data.csv")
 
 
@@ -46,7 +44,6 @@ print("```")
 
 
 #write to text file
-# fw = open("C:/Users/icanhearme/Downloads/Data Science Boot Camp/HW Assignments/challenge 3/PyPoll/analysis/analysis.txt", "w+")
 fw = open("PyPoll/analysis/analysis.txt", "w+")
 fw.write("```text\n")
 fw.write("Election Results")

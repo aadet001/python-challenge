@@ -1,7 +1,6 @@
 import pandas as pd 
 
 pth = "PyBank/Resources/budget_data.csv"
-#pth = "C:/Users/icanhearme/Downloads/Data Science Boot Camp/HW Assignments/challenge 3/PyBank/Resources/budget_data.csv"
 df = pd.read_csv(pth)
 
 #total number of months
