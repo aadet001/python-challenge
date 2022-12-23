@@ -1,7 +1,9 @@
-import pandas as pd 
+"""PyBank"""
+import pandas as pd
 
-pth = "PyBank/Resources/budget_data.csv"
-df = pd.read_csv(pth)
+PTH = "PyBank/Resources/budget_data.csv"
+#pth = "C:/Users/icanhearme/Downloads/Data Science Boot Camp/HW Assignments/challenge 3/PyBank/Resources/budget_data.csv"
+df = pd.read_csv(PTH)
 
 #total number of months
 totalMonths = len(df)
@@ -44,7 +46,7 @@ print("```")
 
 #write to text file
 # fw = open("C:/Users/icanhearme/Downloads/Data Science Boot Camp/HW Assignments/challenge 3/PyBank/analysis/analysis.txt", "w+")
-fw = open("PyBank/analysis/analysis.txt", "w+")
+fw = open("PyBank/analysis/analysis.txt", "w+", encoding="utf8")
 fw.write("```text\n")
 fw.write("Financial Analysis\n")
 fw.write("-------------------------\n")
